@@ -1,9 +1,10 @@
 import React from "react";
 import { DropZone } from "./components/DropZone";
-import { Files } from "./components/Files";
-import Folders from "./components/Folders";
+import Files from "./components/Files";
+import { Folders } from "./components/Folders";
 import { Footer } from "./components/Footer";
-import { NavBar } from "./components/NavBar";
+import { SideNavBar } from "./components/NavBar";
+import RecentFiles from "./components/RecentFiles";
 
 export default function App() {
   return (
@@ -12,12 +13,14 @@ export default function App() {
         display: "flex",
       }}
     >
-      <NavBar />
-      <section style={{ display: "flex", flexDirection: "column" }}>
+      <SideNavBar />
+      <section
+        className="m-20"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
         <Folders />
-        <DropZone />
-        <Files data={[{ name: "resume", type: "pdf", size: "20" }]} />
-        <Footer />
+        <RecentFiles />
+        <Files />
       </section>
     </main>
   );

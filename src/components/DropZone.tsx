@@ -31,9 +31,9 @@ const useStyles = createStyles((theme) => ({
 
   control: {
     position: "absolute",
-    width: 250,
+    width: 30,
     left: "calc(50% - 125px)",
-    bottom: -20,
+    bottom: -25,
   },
 }));
 
@@ -53,15 +53,14 @@ export function DropZone() {
   const openRef = useRef<() => void>();
 
   return (
-    <div style={{ margin: " 1rem 10rem" }} className={classes.wrapper}>
+    <div className={classes.wrapper + " my-10"}>
       <header>
-        {" "}
-        <h2>Upload Files</h2>
+        <h2 className="font-semibold">Upload Files</h2>
       </header>
       <Dropzone
         openRef={openRef}
         onDrop={() => {}}
-        className={classes.dropzone}
+        className={classes.dropzone + " mt-5"}
         radius="md"
         accept={[MIME_TYPES.pdf]}
         maxSize={30 * 1024 ** 2}
