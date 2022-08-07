@@ -11,17 +11,20 @@ export default function App() {
     <main
       style={{
         display: "flex",
+        width: "100vw",
+        justifyContent: "space-between",
       }}
     >
       <SideNavBar />
       <section
-        className="m-20"
+        className="m-20 mb-0"
         style={{ display: "flex", flexDirection: "column" }}
       >
         <Folders />
         <RecentFiles />
         <Files />
       </section>
+      <SideNavBar />
     </main>
   );
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DropZone } from "./DropZone";
 import { createStyles, Navbar, Group, Code } from "@mantine/core";
 import {
   IconFolderMinus,
@@ -98,7 +97,7 @@ const data = [
   { link: "", label: "Shared", icon: IconShare },
 ];
 
-export function SideNavBar() {
+export function SideZone() {
   const { classes, cx } = useStyles();
   const [active, setActive] = useState("Billing");
 
